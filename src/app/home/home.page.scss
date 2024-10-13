@@ -1,0 +1,81 @@
+.container {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #121212;
+}
+
+.header h2 {
+  margin-top: 0;
+}
+
+.music-list {
+  margin: 20px 0;
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.music-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.music-info {
+  flex: 1;
+  text-align: left;
+}
+
+.music-info h3 {
+  margin: 0;
+}
+
+.music-duration {
+  font-size: 14px;
+}
+
+.show-more ion-button {
+  --background: #ff0000;
+  --border-radius: 8px;
+  --color: #ffffff;  /* Cor do texto branca */
+}
+
+.statistics-container {
+  background-color: #1c1c1c;  /* Mesmo fundo do contêiner de cima */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.statistics {
+  margin-top: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+}
+
+.top-5 ol {
+  padding-left: 20px;
+}
+
+.stats-details p {
+  margin: 5px 0;
+}
+
+ion-button {
+  --background: #ff0000;
+  --border-radius: 8px;
+  --color: #ffffff;  /* Cor do texto branca para todos os botões */
+}
