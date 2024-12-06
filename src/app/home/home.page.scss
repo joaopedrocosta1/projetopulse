@@ -1,81 +1,107 @@
-.container {
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  background-color: #121212;
-}
-
-.header h2 {
-  margin-top: 0;
-}
-
-.music-list {
-  margin: 20px 0;
-}
-
-.music-item {
-  display: flex;
-  align-items: center;
-  background-color: #1c1c1c;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
-.music-item img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 4px;
-}
-
-.music-info {
-  flex: 1;
-  text-align: left;
-}
-
-.music-info h3 {
-  margin: 0;
-}
-
-.music-duration {
-  font-size: 14px;
-}
-
-.show-more ion-button {
-  --background: #ff0000;
-  --border-radius: 8px;
-  --color: #ffffff;  /* Cor do texto branca */
-}
-
-.statistics-container {
-  background-color: #1c1c1c;  /* Mesmo fundo do contêiner de cima */
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.statistics {
-  margin-top: 20px;
-}
-
-.stats-grid {
+/* Estilo do container principal */
+.playlist-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  text-align: left;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+  gap: 20px; /* Espaçamento entre os itens */
+  padding: 20px;
+  background-color: #1e1e1e; /* Cor cinza escuro */
 }
 
-.top-5 ol {
-  padding-left: 20px;
+/* Estilo de cada card de playlist */
+.playlist-card {
+  background-color: #2b2b2b; /* Cor de fundo do card */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.stats-details p {
+.playlist-card:hover {
+  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+
+/* Estilo da imagem */
+.playlist-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Estilo do texto */
+.playlist-info h3 {
+  font-size: 1.2em;
+  color: #fff;
   margin: 5px 0;
 }
 
-ion-button {
-  --background: #ff0000;
-  --border-radius: 8px;
-  --color: #ffffff;  /* Cor do texto branca para todos os botões */
+.playlist-info p {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+ion-title {
+  text-align: center; /* Centraliza o texto */
+  font-size: 1.5em; /* Ajusta o tamanho */
+  font-weight: bold;
+}
+
+/* Estilo do container para as músicas mais tocadas */
+.track-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+  gap: 20px; /* Espaçamento entre os itens */
+  padding: 20px;
+  background-color: #1e1e1e; /* Cor cinza escuro, igual ao fundo das playlists */
+  margin-top: 20px; /* Espaço superior entre playlists e músicas mais tocadas */
+}
+
+/* Estilo de cada card de música */
+.track-card {
+  background-color: #2b2b2b; /* Cor de fundo do card */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.track-card:hover {
+  transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+
+/* Estilo da imagem da música */
+.track-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Estilo do texto da música */
+.track-info h3 {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.track-info p {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+/* Título da seção de músicas mais tocadas */
+h2 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
 }

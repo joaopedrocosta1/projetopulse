@@ -1,83 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>STATIC PULSE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <div class="container">
-    <div class="header">
-      <p>OLÁ (NOMEDOUSUÁRIO)</p>
-      <h2>SUAS ULTIMAS MÚSICAS TOCADAS</h2>
-    </div>
-
-    <div class="music-list">
-      <div class="music-item">
-        <img src="assets/img/evanescence.jpg" alt="My Immortal">
-        <div class="music-info">
-          <h3>My Immortal</h3>
-          <p>Evanescence</p>
-        </div>
-        <div class="music-duration">4:22</div>
-      </div>
-
-      <div class="music-item">
-        <img src="assets/img/metallica.webp" alt="Harvester Of Sorrow">
-        <div class="music-info">
-          <h3>Harvester Of Sorrow</h3>
-          <p>Metallica</p>
-        </div>
-        <div class="music-duration">5:45</div>
-      </div>
-
-      <div class="music-item">
-        <img src="assets/img/angra.png" alt="Wuthering Heights">
-        <div class="music-info">
-          <h3>Wuthering Heights</h3>
-          <p>Angra</p>
-        </div>
-        <div class="music-duration">4:39</div>
-      </div>
-
-      <div class="music-item">
-        <img src="assets/img/ironmaiden.webp" alt="Fear Is the Key">
-        <div class="music-info">
-          <h3>Fear Is the Key</h3>
-          <p>Iron Maiden</p>
-        </div>
-        <div class="music-duration">5:34</div>
-      </div>
-
-      <div class="music-item">
-        <img src="assets/img/george.jpg" alt="Careless Whisper">
-        <div class="music-info">
-          <h3>Careless Whisper</h3>
-          <p>George Michael</p>
-        </div>
-        <div class="music-duration">5:00</div>
-      </div>
-    </div>
-
-    <div class="show-more">
-      <ion-button expand="block" color="danger">Mostrar mais</ion-button>
-    </div>
-
-    <div class="statistics">
-      <h2>Confira suas estatísticas</h2>
-      <div class="stats-grid">
-        <div class="top-5">
-          <h3>Top 5 mais escutadas</h3>
-          <ol>
-            <li>Distortion - Babymetal, Alissa White-Gluz</li><br>
-            <li>A New Level - Pantera</li><br>
-            <li>Vengeance Falls - Trivium</li><br>
-            <li>Close to Heaven - Breaking Benjamin</li><br>
-            <li>Break Stuff - Limp Bizkit</li>
-          </ol>
-        </div>
-        <div class="stats-details">
-          <p>Tempo ouvindo: 5.830</p><br>
-          <p>Artista favorito: Babymetal</p><br>
-          <p>Horário mais escutado: 8:00h</p><br>
-          <p>Gênero favorito: Nu-Metal</p><br>
-          <p>Músicas escutadas: 2.043</p>
-          <p>BPM médio: 145</p>
-          <ion-button expand="block" color="danger" routerLink="/about">Sobre nós</ion-button>
-        </div>
+  <!-- Container personalizado para organizar as playlists -->
+  <div class="playlist-container">
+    <div class="playlist-card" *ngFor="let playlist of playlists">
+      <!-- Imagem da playlist com link para o Spotify -->
+      <a [href]="playlist.external_urls.spotify" target="_blank">
+        <img [src]="playlist.images[0]?.url" alt="Playlist Image" />
+      </a>
+      <!-- Informações da playlist -->
+      <div class="playlist-info">
+        <h3>{{ playlist.name }}</h3>
+        <p>{{ playlist.description }}</p>
       </div>
     </div>
   </div>
